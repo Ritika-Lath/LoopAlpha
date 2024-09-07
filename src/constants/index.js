@@ -40,27 +40,34 @@ import {
 export const navigation = [
   {
     id: "0",
-    // title: "Features",
-    title: "Home",
-    url: "#features",
-  },
-  {
-    id: "1",
-    // title: "Pricing",
     title: "Services",
-    url: "#pricing",
+    // title: "Home",
+    url: "#services",
   },
+  // {
+  //   id: "1",
+  //   // title: "Pricing",
+  //   title: "Services",
+  //   url: "#pricing",
+  // },
+  
   {
     id: "2",
     // title: "How to use",
-    title: "Reviews",
-    url: "#how-to-use",
+    title: "Features",
+    url: "#features",
   },
   {
     id: "3",
     title: "Roadmap",
-    title: "Contact Us",
+    // title: "Contact Us",
     url: "#roadmap",
+  },
+  {
+    id: "4",
+    title: "Contact us",
+    // title: "Services",
+    url: "#contact",
   },
   // {
   //   id: "4",
@@ -131,7 +138,44 @@ export const roadmap = [
     imageUrl: roadmap4,
   },
 ];
-
+export const contact = [
+  {
+    id: "0",
+    title: "Gmail",
+    text: "Reach out to us on mail.",
+    value:'itsLoopAlpha@gmail.com'
+    // date: "May 2023",
+    // status: "done",
+    // imageUrl: roadmap1,
+    // colorful: true,
+  },
+  {
+    id: "1",
+    title: "whatsapp",
+    text: "Message us on.",
+    value:'7485020983'
+    // date: "May 2023",
+    // status: "progress",
+    // imageUrl: roadmap2,
+  },
+  {
+    id: "2",
+    title: "Linkedin",
+    text: "Follow us or text us here.",
+    value:'itsLoopAlpha'
+    // date: "May 2023",
+    // status: "done",
+    // imageUrl: roadmap3,
+  },
+  // {
+  //   id: "3",
+  //   title: "Integration with APIs",
+  //   text: "Allow the chatbot to access external data sources, such as weather APIs or news APIs, to provide more relevant recommendations.",
+  //   date: "May 2023",
+  //   status: "progress",
+  //   imageUrl: roadmap4,
+  // },
+];
 export const collabText = "";
 // "With smart automation and top-notch security, it's the perfect solution for teams looking to work smarter.";
 
