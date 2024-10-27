@@ -22,11 +22,12 @@ const Hero = () => {
       id="hero"
     >
       <div className="container relative" ref={parallaxRef}>
-        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[6.25rem]">
-          <h1 className="h1 mb-6">
+        <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[3.875rem] md:mb-20 lg:mb-[7.25rem] flex">
+          {/* <h1 className="h1 my-6 text-6xl ">
             Experience the Cutting Edge of&nbsp;IT Services&nbsp;and Consulting
-            Now with {` `}
-            <span className="inline-block relative">
+            Now with 
+            <br/>
+            <span className="inline-block relative mt-5">
               LoopAlpha{" "}
               <img
                 src={curve}
@@ -35,16 +36,35 @@ const Hero = () => {
                 height={28}
                 alt="Curve"
               />
-              {/* Experience the Cutting Edge of IT and Consulting Services Now! */}
+            </span>
+          </h1> */}
+          <h1 className="text-center font-bold text-5xl md:text-6xl my-9 ">
+            Experience the Cutting Edge of&nbsp;
+            <span className="text-primary  inline-block relative mt-4 mb-3 font-extrabold ">IT Services</span> &&nbsp;
+            <br />
+            <span className="inline-block relative my-3 font-extrabold text-accent">
+              Consulting with
+            </span>
+            <br />
+            <span className="inline-block relative my-3 font-extrabold text-accent">
+              LoopAlpha
+              <img
+                src={curve}
+                className="absolute top-full left-0 w-full mt-1 opacity-80"
+                width={624}
+                height={28}
+                alt="Decorative curve below LoopAlpha"
+              />
             </span>
           </h1>
+
           {/* <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Unleash the power of AI within Brainwave. Upgrade your productivity
             with Brainwave, the open AI chat app.
           </p> */}
-          <Button href="/pricing" white>
+          {/* <Button href="/pricing" white>
             Get started
-          </Button>
+          </Button> */}
         </div>
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
@@ -96,7 +116,7 @@ const Hero = () => {
           <BackgroundCircles />
         </div>
 
-        <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />
+        {/* <CompanyLogos className="hidden relative z-10 mt-20 lg:block" /> */}
       </div>
 
       <BottomLine />

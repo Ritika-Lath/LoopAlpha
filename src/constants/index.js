@@ -141,9 +141,9 @@ export const roadmap = [
 export const contact = [
   {
     id: "0",
-    title: "Gmail",
+    title: "Email",
     text: "Reach out to us on mail.",
-    value:'itsLoopAlpha@gmail.com'
+    value:'connect@loopalpha.com'
     // date: "May 2023",
     // status: "done",
     // imageUrl: roadmap1,
@@ -151,7 +151,7 @@ export const contact = [
   },
   {
     id: "1",
-    title: "whatsapp",
+    title: "Contact Number",
     text: "Message us on.",
     value:'7485020983'
     // date: "May 2023",
@@ -160,9 +160,11 @@ export const contact = [
   },
   {
     id: "2",
-    title: "Linkedin",
-    text: "Follow us or text us here.",
-    value:'itsLoopAlpha'
+    title: "Address",
+    text: "Find us here.",
+    value:`LoopAlpha Park,
+      Mahavir colony, Patna,  
+      India,   Zip-800002`
     // date: "May 2023",
     // status: "done",
     // imageUrl: roadmap3,
