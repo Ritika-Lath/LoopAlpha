@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { loopalpha } from "../assets";
-// import { brainwave } from "../assets";
 import { navigation } from "../constants";
 import Button from "./Button";
 import MenuSvg from "../assets/svg/MenuSvg";
@@ -32,93 +31,37 @@ const Header = () => {
   return (
     <>
       <div
-        className={`fixed top-0 left-0 w-full z-50  border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${
-          openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 border-b border-n-6 lg:bg-n-8/90 lg:backdrop-blur-sm ${openNavigation ? "bg-n-8" : "bg-n-8/90 backdrop-blur-sm"}`}
       >
-        <div className="flex  items-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-          <a className="block w-[08rem] xl:mr-8" href="#hero">
-            <div className="flex flex-col md:flex-row items-center">
-              <img
-                src={loopalpha}
-                width={60}
-                height={50}
-                alt="LoopAlpha"
-                // alt="Placeholder"
-                // className="mb-2 md:mb-0 md:mr-4"
-              />
-              <p className=" mx-0">LoopAlpha</p>
-            </div>
-          </a>
+        <div className="flex items-center justify-between px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
+          {/* Logo and text aligned to the left */}
+          <div className="flex items-center">
+            <a href='#hero' className="flex items-center">
+              <img src={loopalpha} width={60} height={50} alt="LoopAlpha" />
+              <p className="ml-2 text-xl font-semibold">LoopAlpha</p>
+            </a>
+          </div>
 
-          {/* <nav
-            className={`${
-              openNavigation ? "flex" : "hidden"
-            } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent`}
-          >
-            <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
+          {/* Navigation items aligned to the right */}
+          <nav className={`${openNavigation ? "flex" : "hidden"} fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:bg-transparent`}>
+            <div className="relative z-2 flex flex-col items-center lg:flex-row">
               {navigation.map((item) => (
                 <a
                   key={item.id}
                   href={item.url}
                   onClick={handleClick}
-                  className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-                    item.onlyMobile ? "lg:hidden" : ""
-                  } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-                    item.url === pathname.hash
-                      ? "z-2 lg:text-n-1"
-                      : "lg:text-n-1/50"
-                  } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
+                  className={`block font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${item.onlyMobile ? "lg:hidden" : ""} px-6 py-6 lg:text-xs lg:font-semibold ${item.url === pathname.hash ? "lg:text-n-1" : "lg:text-n-1/50"} lg:leading-5 xl:px-12`}
                 >
                   {item.title}
                 </a>
               ))}
             </div>
+          </nav>
 
-            <HamburgerMenu />
-          </nav> */}
-          <nav
-  className={`${
-    openNavigation ? "flex" : "hidden"
-  } fixed top-[5rem] left-0 right-0 bottom-0 bg-n-8 lg:static lg:flex lg:ml-auto lg:bg-transparent`}
->
-  <div className="relative z-2 flex flex-col items-center justify-center lg:flex-row">
-    {navigation.map((item) => (
-      <a
-        key={item.id}
-        href={item.url}
-        onClick={handleClick}
-        className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 ${
-          item.onlyMobile ? "lg:hidden" : ""
-        } px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
-          item.url === pathname.hash ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
-        } lg:leading-5 lg:hover:text-n-1 xl:px-12`}
-      >
-        {item.title}
-      </a>
-    ))}
-  </div>
-
-  <HamburgerMenu />
-</nav>
-
-          {/* <a
-            href="#signup"
-            className="button hidden mr-8 text-n-1/50 transition-colors hover:text-n-1 lg:block"
-          >
-            New account
-          </a>
-          <Button className="hidden lg:flex" href="#login">
-            Sign in
-          </Button> */}
-
-          {/* <Button
-            className="ml-auto lg:hidden"
-            px="px-3"
-            onClick={toggleNavigation}
-          >
+          {/* Hamburger menu button */}
+          <Button className="ml-auto lg:hidden" px="px-3" onClick={toggleNavigation}>
             <MenuSvg openNavigation={openNavigation} />
-          </Button> */}
+          </Button>
         </div>
       </div>
     </>
