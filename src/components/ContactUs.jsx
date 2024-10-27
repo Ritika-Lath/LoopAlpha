@@ -53,8 +53,8 @@ const ContactUs = () => (
                   <p className="body-2 text-n-4">{item.text}</p>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center">
-              <p className="body-2 text-n-4 " >{item.value}</p>
+              <div className="flex flex-col items-center justify-center px-2">
+              <p className="body-2 text-n-4 text-lg" >{item.value}</p>
               </div>
             </div>
           );
